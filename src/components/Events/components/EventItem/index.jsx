@@ -1,3 +1,5 @@
+//import './styles.css'
+import styles from './EventItem.module.css'
 
 const EventItem = ({info, id, name, image, onEventClick}) => {
 
@@ -7,14 +9,16 @@ const EventItem = ({info, id, name, image, onEventClick}) => {
     };
 
     return (
-        <div onClick={()=> console.log('Padre clickeado')}>
+        <div onClick={()=> console.log('Padre clickeado')} className={`${styles.eventItemContainer} ${styles.anotherContainer}`}>
             <img src={image} 
             alt={name} 
             width={200}
              height={200}/>
-            <h4>{name}</h4>
-            <p>{info}</p>
-            <button onClick={handleSeeMoreClick}>Ver más</button>
+            <div className={styles.eventInfoContainer}>
+                <h4 className={styles.eventName}>{name}</h4>
+                <p className={styles.eventInfo}>{info}</p>
+                <button className={styles.eventSeeMore} onClick={handleSeeMoreClick}>Ver más</button>
+            </div>
         </div>
     )
 };

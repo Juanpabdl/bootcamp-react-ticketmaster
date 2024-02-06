@@ -35,7 +35,7 @@ const Events = ({searchTerm}) =>{
 
     return(
         <div>
-            Eventos
+            <p style={{ fontSize: 24, fontWeight:'bold' }}>Eventos</p>
             {renderEvents()}
         </div>
     )
