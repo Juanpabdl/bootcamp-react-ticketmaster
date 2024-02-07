@@ -1,4 +1,4 @@
-//import './styles.css'
+//import { Link } from 'react-router-dom';
 import styles from './EventItem.module.css'
 
 const EventItem = ({info, id, name, image, onEventClick}) => {
@@ -17,7 +17,10 @@ const EventItem = ({info, id, name, image, onEventClick}) => {
             <div className={styles.eventInfoContainer}>
                 <h4 className={styles.eventName}>{name}</h4>
                 <p className={styles.eventInfo}>{info}</p>
-                <button className={styles.eventSeeMore} onClick={handleSeeMoreClick}>Ver más</button>
+                <button className={styles.eventSeeMore} onClick={handleSeeMoreClick}>
+                    {/*<Link to={`/detail/${id}`}>Ver más</Link>*/}
+                    Ver mas
+                </button>
             </div>
         </div>
     )
