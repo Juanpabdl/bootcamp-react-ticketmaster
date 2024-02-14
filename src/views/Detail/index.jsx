@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { format } from "date-fns";
-import { es } from "date-fns/locale"
+import { es } from "date-fns/locale";
+//import useEventsResults from "../../state/events-results";
 import styles from './Detail.module.css';
 
-console.log(import.meta.env);
-
 const Detail = () => {
+    //const {data} = useEventsResults();
     const {eventId} = useParams();
     const [eventData, setEventData] = useState({});
     const [error, setError] = useState({});
     const [isLoading, setIsLoading] = useState(true);
+
+    //console.log(data)
 
     useEffect(()=>{
         const fetchEventData = async() =>{
@@ -38,7 +40,6 @@ const Detail = () => {
         return <div>Ha ocurrido un error</div>
     }
 
-    console.log(eventData)
     return(
         <div className={styles.detailContainer}>
             <div className={styles.mainInfoContainer}>
