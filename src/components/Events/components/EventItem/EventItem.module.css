@@ -27,3 +27,17 @@
 .eventSeeMore{
     margin-top: 5px;
 }
+
+.imageContainer {
+    position: relative;
+}
+
+.heartImage {
+    position: absolute;
+    width: 28px;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    cursor: pointer;
+}
+
