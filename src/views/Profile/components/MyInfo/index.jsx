@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 
 import styles from './MyInfo.module.css';
 
-const USER_DATA = 'userData'
+import { USER_DATA } from '../../../../utils/constants';
 
 const MyInfo = () => {
     const {register, handleSubmit, formState:{ errors }, setValue} = useForm();
