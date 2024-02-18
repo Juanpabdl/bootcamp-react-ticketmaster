@@ -16,7 +16,7 @@ const Events = ({ searchTerm, events }) =>{
         }
 
         return eventsFiltered.map((eventItem) => (
-            <EventItem key={eventItem.id} 
+            <EventItem key={`event-item-${eventItem.id}`} 
             name={eventItem.name} 
             info={eventItem.info}
             image={eventItem.images[0].url}
