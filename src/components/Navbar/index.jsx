@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 const Navbar = forwardRef(({ onSearch }, ref) => {
     const [search, setSearch] = useState('')
 
+    //Ejemplo useEffect
+    /*
     useEffect(()=>{
         console.log("onSearch cambió")
     },[onSearch])
@@ -15,6 +17,7 @@ const Navbar = forwardRef(({ onSearch }, ref) => {
     useEffect(()=>{
         console.log("search cambió")
     },[search])
+    */
 
     useImperativeHandle(ref,()=>({
         search,
